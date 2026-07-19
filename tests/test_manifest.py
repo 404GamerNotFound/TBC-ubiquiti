@@ -35,10 +35,10 @@ def test_probe_rejects_invalid_manual_stream_uri():
 
 
 def test_probe_accepts_rtsps_uri_shape(monkeypatch):
-    from app.tbc.manual_rtsp import module as manual_rtsp_module
+    from tbc_camera_api import streams as manual_rtsp_streams
 
     monkeypatch.setattr(
-        manual_rtsp_module, "probe_rtsp_stream", lambda uri, **kwargs: ("ok", "RTSP-Stream erreichbar")
+        manual_rtsp_streams, "probe_rtsp_stream", lambda uri, **kwargs: ("ok", "RTSP-Stream erreichbar")
     )
     module = UbiquitiCameraModule()
     snapshot = asyncio.run(module.probe({"manual_stream_uri": "rtsps://example.invalid:7447/live/stream"}))
