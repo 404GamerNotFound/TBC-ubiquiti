@@ -1,5 +1,8 @@
 # Ubiquiti / UniFi Protect
 
-Das Profil verwendet den in UniFi Protect erzeugten RTSP- oder RTSPS-Link. Der
-Port `7447` ist der Protect-Standard für ausgehendes RTSP; ein abweichender Port
-aus dem kopierten Link bleibt unverändert.
+This profile uses the RTSP or RTSPS link generated in UniFi Protect. Port `7447` is Protect's
+default for outgoing RTSP; a different port in the copied link remains unchanged.
+
+## Independence
+
+This project is independent and is not affiliated with, endorsed by, or sponsored by Ubiquiti.
